@@ -6,15 +6,15 @@ import { PhotosUploaderComponent } from './photos-uploader.component';
 
 
 @NgModule({
-  declarations: [
-    PhotosUploaderComponent
-  ],
-  exports: [
-    PhotosUploaderComponent
-  ],
-  imports: [
-    CommonModule,
-    IconModule
-  ]
+    declarations: [
+        PhotosUploaderComponent
+    ],
+    exports: [
+        PhotosUploaderComponent
+    ],
+    imports: [
+        CommonModule,
+        IconModule
+    ]
 })
 export class PhotosUploaderModule { }

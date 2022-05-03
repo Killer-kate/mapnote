@@ -20,7 +20,7 @@ export class PlaceEditComponent implements OnInit {
   })
 
   constructor(private dialogService: DialogService,
-              private httpClient: HttpClient) {
+    private httpClient: HttpClient) {
   }
 
   public ngOnInit(): void {

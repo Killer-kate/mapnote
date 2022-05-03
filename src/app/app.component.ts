@@ -12,8 +12,8 @@ import { MapService } from "./map.service"
 export class AppComponent implements AfterViewInit {
 
   constructor(private mapService: MapService,
-              public readonly dialogService: DialogService) {
-  }
+    public readonly dialogService: DialogService) {
+}
 
   public ngAfterViewInit(): void {
     const map = new LeafletMap("map-container", {
@@ -25,7 +25,6 @@ export class AppComponent implements AfterViewInit {
       center: new LatLng(45.040034, 38.975828),
       zoom: 13
     })
-
     this.mapService.setLeafletMap(map)
   }
 }

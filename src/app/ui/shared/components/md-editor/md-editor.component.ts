@@ -38,7 +38,7 @@ export class MdEditorComponent implements OnInit, ControlValueAccessor {
     this.selectedTabName = tabName
   }
 
-  public onChangeEditorValue(newValue: string): void {
+  public  onChangeEditorValue(newValue: string): void {
     this.editorValue = newValue
     this.onChange(newValue)
   }
@@ -60,10 +60,10 @@ export class MdEditorComponent implements OnInit, ControlValueAccessor {
   }
 
   public writeValue(markdown: string): void {
+
     if (markdown === null) {
       return
     }
-
     this.editorValue = markdown
   }
 }

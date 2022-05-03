@@ -51,7 +51,6 @@ export class TagsComponent implements OnInit, ControlValueAccessor {
       this.tags = []
       return
     }
-
     this.tags = tags
   }
 

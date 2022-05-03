@@ -14,7 +14,7 @@ export class ShellComponent implements OnInit {
   public searchFormControl: FormControl = new FormControl()
 
   constructor(private mapService: MapService,
-              private dialogService: DialogService) {
+    private dialogService: DialogService) {
   }
 
   public ngOnInit(): void {
