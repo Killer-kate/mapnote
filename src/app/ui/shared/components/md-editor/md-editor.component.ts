@@ -1,6 +1,6 @@
 import { Component, forwardRef, OnInit } from "@angular/core"
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms"
-import { DomSanitizer, SafeHtml } from "@angular/platform-browser"
+import { DomSanitizer} from "@angular/platform-browser"
 import snarkdown from "snarkdown"
 
 type EditorTabName = "RAW" | "RESULT"
@@ -34,16 +34,11 @@ export class MdEditorComponent implements OnInit, ControlValueAccessor {
   public ngOnInit(): void {
   }
 
-  public onClickTabButton(tabName: EditorTabName): void {
+  public onClickTabButton(tabName: EditorTabName) {
     this.selectedTabName = tabName
   }
 
-  public onChangeEditorValue(newValue: string): void {
-    this.editorValue = newValue
-    this.onChange(newValue)
-  }
-
-  public convertMarkdownToHtml(markdown: string): SafeHtml {
+  public convertMarkdownToHtml(markdown: string) {
     return this.domSanitizer.bypassSecurityTrustHtml(snarkdown(markdown))
   }
 
@@ -60,10 +55,5 @@ export class MdEditorComponent implements OnInit, ControlValueAccessor {
   }
 
   public writeValue(markdown: string): void {
-    if (markdown === null) {
-      return
-    }
-
-    this.editorValue = markdown
   }
 }
